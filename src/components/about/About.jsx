@@ -1,5 +1,5 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
+import './About.css';
 
 const About = () => {
   return (
@@ -7,6 +7,9 @@ const About = () => {
       <h1>About</h1>
     </div>
   )
+  
 }
 
-export default About
+
+
+export default About;
