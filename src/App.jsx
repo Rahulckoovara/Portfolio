@@ -17,7 +17,7 @@ function App() {
     <Nav/>
     <About/>
     <Experience/>
-    <Services/>
+    
     <Portfolio/>
     <Contacts/>
     <Footer/>
