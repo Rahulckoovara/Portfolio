@@ -9,12 +9,10 @@ const About = () => {
     <section id='about'>
       <h5>Get to Know</h5>
       <h2>About me</h2>
-
       <div className='container about__container'>
         <div className="about__me">
         <div className="about__me_image">
-          <img src={ME} alt='
-          '/> 
+          <img src={ME} alt=''/> 
         </div>
         </div>
         <div  className="about__contents">
@@ -30,7 +28,7 @@ const About = () => {
       <h5>Projects</h5>
       <small>5+</small>
             </article>
-         
+          
           </div>
           <p  className='about__content'>Dedicated to creating captivating digital experiences through web and app development, I specialize in React and Flutter. My enthusiasm for diverse IT domains, coupled with a commitment to ongoing learning, fuels my drive to stay innovative and collaborate with fellow tech enthusiasts</p>
         <a href='#contacts' className='btn btn-primary'>Lets Talk</a>

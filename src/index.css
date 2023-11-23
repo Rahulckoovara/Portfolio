@@ -42,10 +42,12 @@ background-image: url(../src/assets/bg-texture.png);
 }
 
 /* -------general style-------------------- */
-.container{
+.container
+{
+
   width: var(--container-width-lg);
   margin: 0 auto;
-
+  
 }
 
 h1,h2,h3,h4,h5{
@@ -101,8 +103,7 @@ transition: var(--transition);
 .btn-primary{
   background: var(--color-primary);
   color: var(--color-bg);
-  
-  border-radius: 5px;
+   border-radius: 5px;
 }
 img{
   display: block;
