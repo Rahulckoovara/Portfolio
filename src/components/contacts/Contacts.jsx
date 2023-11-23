@@ -1,6 +1,8 @@
 import React,{useRef} from 'react'
 import { AiOutlineMail } from "react-icons/ai";
 import './Contact.css';
+import emailjs from "emailjs-com";
+
 
 const Contacts = () => {
   const form = useRef();
@@ -8,7 +10,20 @@ const Contacts = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+
+
+// ---------email services------------------------------------------------------------
+
+
+
     emailjs.sendForm('service_5nv3uy8', 'template_fygw9pl', form.current, 'M_VVA5T0V_3rfFLhF')
+
+
+    //for--ressetting the emai field------
+
+
+
+    e.target.reset()
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -35,8 +50,8 @@ const Contacts = () => {
           <form ref={form} onSubmit={sendEmail}>
     	    <input type='text' name='name' placeholder='Your Full Name' required/> 
           <input type='email' name='email' placeholder='Your Email' required  />
-          <textarea name='message' id='' cols='30' rows='7' placeholder='Your message' required></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <textarea name='message' id='' cols='30' rows='7' placeholder='Your Message' required></textarea>
+          <button type='submit' style={{padding:'2%'}} className='btn btn-primary'>Send Message</button>
           </form>
 
         </div>

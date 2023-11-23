@@ -55,7 +55,8 @@ h1{
   font-size: 2.5rem;
 }
 section{
-  margin-top: 8rem;
+  margin-top:12rem;
+  height: 100%;
 }
 section>h2,section>h5{
   text-align: center;
@@ -100,6 +101,8 @@ transition: var(--transition);
 .btn-primary{
   background: var(--color-primary);
   color: var(--color-bg);
+  
+  border-radius: 5px;
 }
 img{
   display: block;

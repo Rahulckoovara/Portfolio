@@ -5,7 +5,7 @@ import { MdVerified } from "react-icons/md";
 
 const Experience = () => {
   return (
-    <section id='exp'>
+    <section id='experience'>
       <h5>Skills i Have</h5>
       <h2>My Experience</h2>
       <div className=' exp exp__container'>

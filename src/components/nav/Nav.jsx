@@ -9,13 +9,13 @@ import { useState } from 'react';
 
 const Nav = () => {
 
-  const [active, setActive] = useState('#');
+  const [active,setActive] = useState('#');
   return (
     <nav>
         <a href='#' onClick={()=>setActive('#')} className={active==='#'?'active':''}><IoMdHome /></a>
         <a href='#about' onClick={()=>setActive('#about')} className={active==='#about'?'active':''}><LuUser2 /></a>
         <a href='#experience' onClick={()=>setActive('#experience')} className={active==='#experience'?'active':''}><BiBookOpen /></a>
-        <a href='#services' onClick={()=>setActive('#services')} className={active==='#services'?'active':''}><RiServiceLine /></a>
+        <a href='#portfolio' onClick={()=>setActive('#portfolio')} className={active==='#portfolio'?'active':''}><RiServiceLine /></a>
         <a href='#contacts' onClick={()=>setActive('#contacts')} className={active==='#contacts'?'active':''}><BiMessageDetail /></a>
       
     </nav>

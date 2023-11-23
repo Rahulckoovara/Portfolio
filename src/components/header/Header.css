@@ -80,3 +80,8 @@ header{
         display: none;
     }
 }
+
+.header__icons{
+    font-size: 1.5rem;
+    
+}
