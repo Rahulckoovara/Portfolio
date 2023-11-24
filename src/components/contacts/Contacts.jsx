@@ -111,7 +111,7 @@ const Contacts = () => {
             >
               Send Message
             </button>
-            {showSuccessMessage && <div style={{ color: 'green',fontWeight:'300', marginTop: '5px' }}>Message sent successfully!</div>}
+            {showSuccessMessage && <div style={{ color: 'green',fontWeight:'700', marginTop: '5px' }}>Message sent successfully!</div>}
 
           </form>
         </div>
