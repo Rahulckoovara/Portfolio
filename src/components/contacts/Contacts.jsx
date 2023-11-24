@@ -3,10 +3,14 @@ import { AiOutlineMail } from "react-icons/ai";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 
+
 const Contacts = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+
 
   // ---input value inn conatct field----
 
@@ -49,7 +53,12 @@ const Contacts = () => {
     setName("");
     setEmail("");
     setMessage("");
-  };
+  
+  setShowSuccessMessage(true);
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000); // Adjust the timeout as needed
+};
 
   return (
     <section id="contacts">
@@ -93,7 +102,7 @@ const Contacts = () => {
               required
             ></textarea>
             <button
-              onClick={() => alert("Message send Succesfully")}
+             
               type="submit"
               onSubmit={handleSubmit}
               disabled={isButtonDisabled}
@@ -102,6 +111,8 @@ const Contacts = () => {
             >
               Send Message
             </button>
+            {showSuccessMessage && <div style={{ color: 'green',fontWeight:'300', marginTop: '5px' }}>Message sent successfully!</div>}
+
           </form>
         </div>
       </div>
