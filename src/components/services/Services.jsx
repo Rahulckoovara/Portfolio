@@ -28,7 +28,7 @@ const Services = () => {
             <small>ULTS</small><br/>
             <small> October 2023- Present</small>
             
-            <p>Working as Associate Engineer in the UL Technology Solutions </p>
+            <p>Working as Application developer in UL Technology Solutions </p>
             <span className="right-container-arrow"></span>
           </div>
         </div>
