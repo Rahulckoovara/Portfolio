@@ -1,60 +1,52 @@
-.exp__container{
-    display: flex;
-   justify-content: center;
-    
-   align-items: center;
-    
+.exp__container {
+  display: flex;
+  justify-content: center;
 
+  align-items: center;
 }
-.exp__container >div{
-    background: var(--color-bg-variant);
-    padding: 2rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    
-
+.exp__container > div {
+  background: var(--color-bg-variant);
+  padding: 2rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
 }
-.exp__container>div:hover{
-    background: transparent;
-    border-color: var(--color-bg-variant);
-    cursor: default;
+.exp__container > div:hover {
+  background: transparent;
+  border-color: var(--color-bg-variant);
+  cursor: default;
 }
-.exp__container h3{
-    text-align: center;
-    margin-top: 1rem;
-    color: var(--color-primary);
+.exp__container h3 {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--color-primary);
 }
-.exp__content{
-    display: grid;
-    column-gap: 2rem;
+.exp__content {
+  display: grid;
+  column-gap: 2rem;
 }
 
-.exp__details{
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
+.exp__details {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
 }
-.exp__skill{
-    display: flex;
-    gap:.5em;
+.exp__skill {
+  display: flex;
+  gap: 0.5em;
 }
-.exp__icon{
-    color: var(--color-primary);
+.exp__icon {
+  color: var(--color-primary);
 }
-@media screen and (max-width: 1024px){
-  
-  .exp__container>div{
+@media screen and (max-width: 1024px) {
+  .exp__container > div {
     width: 50%;
     padding: 2rem;
     margin: 0 auto;
   }
-  }
+}
 /* --------media queries small devices------------- */
-@media screen and (max-width: 600px){
-   .exp__container{
-    gap:1rem;
-
-   }
-   
-
+@media screen and (max-width: 600px) {
+  .exp__container {
+    gap: 1rem;
+  }
 }

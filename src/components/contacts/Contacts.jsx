@@ -15,6 +15,7 @@ const Contacts = () => {
   // ---input value inn conatct field----
 
   const handleNameChange = (e) => {
+    
     setName(e.target.value);
   };
   const handleEmailChange = (e) => {

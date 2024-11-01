@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import ME from '../../assets/me-about.jpg';
+import ME from '../../assets/me_about_pic.jpg';
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 
@@ -20,17 +20,17 @@ const About = () => {
             <article className='about__card'>
               <FaAward className='about__icon'/>
       <h5>Experience</h5>
-      <small>2+months</small>
+      <small>1+ years</small>
             </article>
             <article className='about__card'>
             <VscFolderLibrary className='about__icon'/>
 
       <h5>Projects</h5>
-      <small>5+</small>
+      <small>8+</small>
             </article>
           
           </div>
-          <p  className='about__content'>Dedicated to creating captivating digital experiences through web and app development, I specialize in React and Flutter. My enthusiasm for diverse IT domains, coupled with a commitment to ongoing learning, fuels my drive to stay innovative and collaborate with fellow tech enthusiasts</p>
+          <p  className='about__content'>Dedicated to creating captivating digital experiences through app and web development, I specialize in App development. My enthusiasm for diverse IT domains, coupled with a commitment to ongoing learning, fuels my drive to stay innovative and collaborate with fellow tech enthusiasts</p>
         <a href='#contacts' className='btn btn-primary'>Lets Talk</a>
         </div>
       </div>

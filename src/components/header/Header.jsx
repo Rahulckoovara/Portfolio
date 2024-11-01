@@ -1,6 +1,6 @@
   import React,{useState,useEffect} from 'react';
   import CTA from './CTA';
-  import ME from '../../assets/me.png';
+  import ME from '../../assets/me_pic.png';
   import HeaderSocials from './HeaderSocials';
   import './Header.css';
 
