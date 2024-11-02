@@ -17,7 +17,6 @@ const Footer = () => {
         <li><a href='#experience'>Experience</a></li>
         <li><a href='#portfolio'>Portfolio</a></li>
        <li><a href='#contacts'>Contacts</a></li>
-        
       </ul>
       <div className="footer__socials">
         <a href='https://facebook.com' target=' '><FaFacebookF className='footer__logo' /></a>
@@ -26,7 +25,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; RAHUL.All rights reserved</small>
+        <small>&copy; RAHUL C. All rights reserved.</small>
       </div>
     </footer>
   )
