@@ -40,10 +40,10 @@ const Portfolio = () => {
 
       </div>
       
-        <h3>E-Commerce</h3>
+        <h3>Home Rental application</h3>
         <div style={{display:'flex'}}>
         <a href='https://github.com/Rahulckoovara/E-commerce' target='_blank' className='btn'> Github</a>
-        <p style={{color:'cyan'}}>#React,#Javascript</p>
+        <p style={{color:'cyan'}}>#React, #Javascript</p>
         </div>
         </article>
         <article className='portfolio__item'>

@@ -1,21 +1,19 @@
 import React, { useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import "./Contact.css";
-import emailjs from "emailjs-com";
 
-
+import axios from "axios";
 const Contacts = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-
-
-  // ---input value inn conatct field----
+  
+//google shhet urll
+//https://docs.google.com/spreadsheets/d/1eQ9v6b8TKZN6Ih865Z2q12q7z8eDCxyrYx9jhDQlrYc/edit?gid=0#gid=0
 
   const handleNameChange = (e) => {
-    
     setName(e.target.value);
   };
   const handleEmailChange = (e) => {
@@ -25,41 +23,29 @@ const Contacts = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
-    console.log(name, email, message);
-  };
-
-  const isButtonDisabled =
-    name.trim() === "" || email.trim() === "" || message.trim() === "";
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    // ---------email services------------------------------------------------------------
-
-    emailjs.sendForm(
-      "service_5nv3uy8",
-      "template_fygw9pl",
-      form.current,
-      "M_VVA5T0V_3rfFLhF"
+    const data = {
+      Name: name,
+      Email: email,
+      Message: message,
+    };
+    axios
+      .post(
+        "https://api.sheetbest.com/sheets/b7e573d8-277a-4ad0-865b-3d1aec442050",
+        data
+      )
+      .then((res) => console.log(res)
+   
     );
-
-    //for--ressetting the emai field------
-
- 
-    form.current.reset(), 
-    setName("");
-    setEmail("");
-    setMessage("");
-  
-  setShowSuccessMessage(true);
-    setTimeout(() => {
-      setShowSuccessMessage(false);
-    }, 3000); // Adjust the timeout as needed
-};
+    setShowSuccessMessage(true);
+    setTimeout(()=>setShowSuccessMessage(false),3000);
+    //clearformfields
+      setName("");
+      setEmail("");
+      setMessage("");
+    };
 
   return (
     <section id="contacts">
@@ -72,10 +58,10 @@ const Contacts = () => {
 
             <h4>Email</h4>
 
-            <a href="mailto:rahulckoovara1445@gmail.com">send a message</a>
+            <a>send a message</a>
           </article>
 
-          <form ref={form} onSubmit={sendEmail}>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               value={name}
@@ -103,17 +89,19 @@ const Contacts = () => {
               required
             ></textarea>
             <button
-             
               type="submit"
-              onSubmit={handleSubmit}
-              disabled={isButtonDisabled}
               style={{ padding: "2%" }}
               className="btn btn-primary"
             >
               Send Message
             </button>
-            {showSuccessMessage && <div style={{ color: 'green',fontWeight:'700', marginTop: '5px' }}>Message sent successfully!</div>}
-
+            {showSuccessMessage && (
+              <div
+                style={{ color: "green", fontWeight: "700", marginTop: "5px" }}
+              >
+                Message sent successfully!
+              </div>
+            )}
           </form>
         </div>
       </div>
@@ -122,3 +110,65 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+
+
+//    // if (name && email && message) {
+    //   try {
+    //     // Google Sheets API URL to append data to the sheet
+    //     const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A1:append?valueInputOption=USER_ENTERED&key=${API_KEY}`;
+
+    //     // Send data to Google Sheets
+    //     await axios.post(endpoint, {
+    //       values: [[name, email, message]]
+    //     });
+
+    //     setShowSuccessMessage(true);
+    //     setName("");
+    //     setEmail("");
+    //     setMessage("");
+
+    //     setTimeout(() => setShowSuccessMessage(false), 3000);
+    //   } catch (error) {
+    //     console.error("Error writing to Google Sheets", error);
+    //   }
+    // } else {
+    //   alert("Please fill all fields");
+    // }
+
+  // // Button is disabled if any field is empty
+  // const isButtonDisabled =
+  //   name.trim() === "" || email.trim() === "" || message.trim() === "";
+
+  // const form = useRef();
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   if (!isButtonDisabled) {
+  //     // Email service configuration
+  //     emailjs
+  //       .sendForm(
+  //         "service_5nv3uy8",
+  //         "template_fygw9pl",
+  //         form.current,
+  //         "M_VVA5T0V_3rfFLhF"
+  //       )
+  //       .then(
+  //         () => {
+  //           // Clear the form
+  //           form.current.reset();
+  //           setName("");
+  //           setEmail("");
+  //           setMessage("");
+  //           setShowSuccessMessage(true);
+
+  //           // Hide success message after 3 seconds
+  //           setTimeout(() => setShowSuccessMessage(false), 3000);
+  //         },
+  //         (error) => {
+  //           console.error("Email sending failed:", error);
+  //         }
+  //       );
+  //   }
+  // };

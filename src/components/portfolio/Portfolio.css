@@ -22,7 +22,9 @@
 .portfolio__item h3{
     margin: 1.2rem 0 2rem;
 }
-
+.btn{
+    margin-right:3%;
+}
 
 /* --------media queries------------- */
 @media screen and (max-width: 1024px){
