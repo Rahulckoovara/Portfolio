@@ -20,10 +20,24 @@
     overflow: hidden;
 }
 .portfolio__item h3{
-    margin: 1.2rem 0 2rem;
+    margin: 1rem 0 1rem 0;
 }
 .btn{
     margin-right:3%;
+}
+.portfolio_subtitle{
+    font-size: 14px;
+}
+.portfolio_subtitle p {
+    color: cyan;
+}
+
+.list_footer{
+    display: flex;
+    margin-top: 1rem;
+}
+.list_footer p{
+  color: white;
 }
 
 /* --------media queries------------- */
